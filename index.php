@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Meu currículo</h1>
+        <h1>Ver currículo de Lucas Gabriel</h1>
         <p>Bem vindo á minha pagina principal</p>
     </header>
     <a href="curriculo.php" class="botao">

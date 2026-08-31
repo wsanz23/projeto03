@@ -30,7 +30,7 @@
             <h2>Experiencia</h2>
             <p>Mart serviços e terceirizações LTDA</p>
             <strong>Cargo:</strong><p>Auxiliar de produção</p>
-            <strong>Período</strong><p>12/05/25 há 25/08/26</p>
+            <strong>Período</strong><p>12/05/25 atual</p>
         </section>
     </main>
 </body>
