@@ -8,12 +8,17 @@
 </head>
 <body>
     <header>
-        <h1>Ver currículo de Lucas Gabriel</h1>
+        <h1>Ver currículos</h1>
         <p>Bem vindo á minha pagina principal</p>
     </header>
     <a href="curriculo.php" class="botao">
-Ver currículo
+Lucas Gabriel
 </a>
+<p>
+<a href="curriculowendell.php" class="botao">
+    Wendell
+</a>
+</p>
 
 </body>
 </html>
