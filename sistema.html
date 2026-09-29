@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GYM FIT</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button type="button" class="btn">Cadastro</button>
-<button type="button" class="btn">Financeiro</button>
-<button type="button" class="btn">Compras</button>
-<button type="button" class="btn">Faturamento</button>
-<button type="button" class="btn">Contabil</button>
-<button type="button" class="btn">Estoque</button>
-<button type="button" class="btn">Comercial</button>
 
+    
+    <div class="sidebar">
+        <h2>GYM FIT</h2>
+        <ul>
+            <li><a href="#" style="background-color: #18bc9c;">Gráfico</a></li>
+            <li><a href="#">Alunos</a></li>
+            <li><a href="#">Financeiro</a></li>
+            <li><a href="#">Contabil</a></li>
+            <li><a href="#">Vendas</a></li>
+            <li><a href="#">estoque</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="main-content">
+        
+        <div class="header">
+            <div>
+                <h1>Paínel de Controle</h1>
+                <p>Bem-vindo de volta, Gestor.</p>
+            </div>
+            <div>
+                <button>+ Nova Venda </button>
+            </div>
+        </div>
+
+        
+        <div class="cards">
+            <div class="card">
+                <h3>Alunos Ativos</h3>
+                <div class="value">452</div>
+            </div>
+            <div class="card" style="border-left-color: #3498db;">
+                <h3>Faturamento Mensal</h3>
+                <div class="value">R$ 45.200,00</div>
+            </div>
+            <div class="card" style="border-left-color: #e74c3c;">
+                <h3>Contas a Pagar (Hoje)</h3>
+                <div class="value">R$ 1.250,00</div>
+            </div>
+            <div class="card" style="border-left-color: #f1c40f;">
+                <h3>Alertas de Estoque</h3>
+                <div class="value">5 itens</div>
+            </div>
+        </div>
+
+        
+        <div class="dashboard-grid">
+            
+            <div class="box">
+                <h3>Faturamento x Despesas (Semestre)</h3>
+                <canvas id="financeiroChart"></canvas>
+            </div>
+
+            <div class="box">
+                <h3>Últimos Acessos/Matrículas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pessoa 1</td><td style="color: green;">Ativo</td></tr>
+                        <tr><td>Pessoa 2</td><td style="color: green;">Ativo</td></tr>
+                        <tr><td>Pessoa 3</td><td style="color: red;">Pendente</td></tr>
+                        <tr><td>Pessoa 4</td><td style="color: green;">Ativo</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+  
+    <script>
+        const ctx = document.getElementById('financeiroChart').getContext('2d');
+        const financeiroChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'],
+                datasets: [
+                    {
+                        label: 'Faturamento (R$)',
+                        data: [38000, 41000, 40500, 43000, 44500, 45200],
+                        backgroundColor: '#18bc9c'
+                    },
+                    {
+                        label: 'Despesas (R$)',
+                        data: [20000, 22000, 19000, 21000, 23000, 20500],
+                        backgroundColor: '#e74c3c'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
