@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM FIT</title>
     
-    <!-- Bootstrap 5 CSS -->
+  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Seu arquivo CSS customizado -->
-    <link rel="stylesheet" href="style.css">
     
-    <!-- Chart.js -->
+    <link rel="stylesheet" href="style1.css">
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             
-            <!-- Sidebar -->
+            
             <nav class="col-md-3 col-lg-2 d-none d-md-block bg-sidebar vh-100 position-fixed py-4 shadow">
                 <h2 class="text-center text-brand mb-4 fw-bold">GYM FIT</h2>
                 <ul class="nav flex-column px-3">
@@ -35,10 +35,9 @@
                 </ul>
             </nav>
 
-            <!-- Main Content -->
+            
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
                 
-                <!-- Header: Painel -->
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 bg-white p-3 rounded shadow-sm">
                     <div>
                         <h1 class="h3 mb-0 text-dark fw-bold">Painel de Controle</h1>
@@ -49,7 +48,7 @@
                     </div>
                 </div>
 
-                <!-- Cards Resumo -->
+               
                 <div class="row mb-4">
                     <div class="col-md-3 mb-3">
                         <div class="card shadow-sm border-0 border-start border-brand border-left-custom h-100">
@@ -85,9 +84,9 @@
                     </div>
                 </div>
 
-                <!-- Gráfico e Tabela -->
+                
                 <div class="row mb-5">
-                    <!-- Gráfico -->
+                 
                     <div class="col-lg-8 mb-4">
                         <div class="card shadow-sm border-0 p-4 h-100">
                             <h5 class="text-dark fw-bold mb-4">Faturamento x Despesas (Semestre)</h5>
@@ -95,7 +94,7 @@
                         </div>
                     </div>
 
-                    <!-- Tabela -->
+                
                     <div class="col-lg-4 mb-4">
                         <div class="card shadow-sm border-0 p-4 h-100">
                             <h5 class="text-dark fw-bold mb-4">Últimos Acessos/Matrículas</h5>
@@ -119,7 +118,7 @@
                     </div>
                 </div>
 
-                <!-- Formulário de Novo Aluno -->
+                
                 <div class="pb-2 mb-4 border-bottom">
                     <h1 class="h3 fw-bold">Novo Registro de Aluno</h1>
                 </div>
@@ -181,7 +180,7 @@
                             </div>
                         </div>
 
-                        <!-- Botões de Ação -->
+                       
                         <div class="d-flex justify-content-end gap-2 mt-2">
                             <button type="button" class="btn btn-danger fw-bold px-4">Cancelar</button>
                             <button type="submit" class="btn bg-brand fw-bold px-4">Guardar Registro</button>
@@ -193,7 +192,7 @@
         </div>
     </div>
 
-    <!-- Script do Chart.js -->
+    
     <script>
         const ctx = document.getElementById('financeiroChart').getContext('2d');
         const financeiroChart = new Chart(ctx, {
@@ -224,8 +223,9 @@
             }
         });
     </script>
-    
-    <!-- Bootstrap JS (Necessário para componentes interativos no futuro) -->
+    /*/
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+    
