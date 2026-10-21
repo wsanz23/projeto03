@@ -159,11 +159,6 @@ body { display: flex;
             font-size: 24px; }
 
       
-        /*.form-container {
-             background: rgb(214, 5, 5); 
-            padding: 30px; 
-            border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-        }*/
     
         .form-section-title { 
             font-size: 18px; 
@@ -244,25 +239,4 @@ body { display: flex;
             background-color: #128f76; 
         }
 
-       /* Ajuste específico para centralizar a tela de login */
-        .login-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .login-card {
-            width: 100%;
-            max-width: 400px;
-        }  
-
-        .btn-exit {
-            color: #bc1818;
-           background-color: #1a252f;
-           outline: none;
-           border: none;
-        }
-
-        .centralizar{
-            text-align: center;
-        }
+       
