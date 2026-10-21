@@ -15,11 +15,11 @@
         <ul>
             <li><a href="#" style="background-color: #18bc9c;">Gráfico</a></li>
             <li><a href="registro.php">Alunos</a></li>
-            <li><a href="#">Financeiro</a></li>
-            <li><a href="#">Contabil</a></li>
-            <li><a href="#">Vendas</a></li>
-            <li><a href="#">estoque</a></li>
-            <li><a href="#">Ajuda</a></li>
+            <li><a href="financeiro.php">Financeiro</a></li>
+            <li><a href="contabil.php">Contabil</a></li>
+            <li><a href="vendas.php">Vendas</a></li>
+            <li><a href="estoque.php">estoque</a></li>
+            <li><a href="ajuda.php">Ajuda</a></li>
         </ul>
     </div>
 
