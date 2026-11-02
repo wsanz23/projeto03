@@ -1,3 +1,40 @@
+<?php
+
+require_once 'conexao.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = trim($_POST['nome']);
+    $cpf = trim($_POST['cpf']);
+    $cnh = trim($_POST['cnh']);
+    $telefone = trim($_POST['telefone']);
+    $email = trim($_POST['email']);
+
+    $comando = $conexao->prepare(
+        'INSERT INTO cliente
+        (nome, cpf, cnh, telefone, email)
+        VALUES (?, ?, ?, ?, ?)'
+    );
+
+    $comando->execute([
+        $nome,
+        $cpf,
+        $cnh,
+        $telefone,
+        $email
+    ]);
+
+    header('Location: clientes.php');
+    exit;
+}
+
+$comando = $conexao->query(
+    'SELECT * FROM cliente ORDER BY nome'
+);
+
+$clientes = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -193,13 +230,47 @@
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td colspan="4" class="text-center text-muted">
-                                        Nenhum cliente cadastrado.
-                                    </td>
-                                </tr>
-                            </tbody>
 
+    <?php if (count($clientes) === 0): ?>
+
+        <tr>
+            <td colspan="4" class="text-center text-muted">
+                Nenhum cliente cadastrado.
+            </td>
+        </tr>
+
+    <?php else: ?>
+
+        <?php foreach ($clientes as $cliente): ?>
+
+            <tr>
+                <td>
+                    <?= htmlspecialchars($cliente['nome']) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($cliente['cpf']) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($cliente['telefone']) ?>
+                </td>
+
+                <td>
+                    <button class="btn btn-sm btn-outline-primary">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger">
+                        Excluir
+                    </button>
+                            </td>
+                             </tr>
+
+                              <?php endforeach; ?>
+                                                                                    <?php endif; ?>
+
+                            </tbody>
                         </table>
                     </div>
                 </div>
