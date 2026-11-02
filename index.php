@@ -1,54 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - GYM FIT</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-sidebar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="container login-container">
-        <div class="card shadow-lg border-0 p-4 login-card rounded-4">
-            
-            <div class="text-center mb-4 mt-2">
-                <h1 class="display-6 text-brand fw-bold mb-1">GYM FIT</h1>
-                <p class="text-muted">Acesso ao painel de gestão</p>
+    <title>DriveELW - Locadora de Carros</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.php">
+                <i class="bi bi-car-front-fill text-primary"></i>
+                ELW
+            </a>
+
+            <span class="text-white">
+                Locadora de Carros
+            </span>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <section class="bg-primary text-white rounded-4 p-5 shadow-sm">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <h1 class="display-5 fw-bold">
+                        Alugue seu carro com facilidade
+                    </h1>
+
+                    <p class="lead">
+                        Sistema de controle para clientes, carros e locações.
+                    </p>
+
+                    <a href="#resumo" class="btn btn-light">
+                        Conhecer o sistema
+                    </a>
+                </div>
+
+                <div class="col-md-4 text-center mt-4 mt-md-0">
+                    <i class="bi bi-car-front-fill display-1"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="resumo" class="row g-4 mt-4">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill text-primary fs-1"></i>
+
+                        <h2 class="h4 mt-3">
+                            Clientes
+                        </h2>
+
+                        <p class="text-muted">
+                            Cadastre e consulte os clientes da locadora.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-          
-            
-            <form action="sistema.php" method="POST">
-                
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control focus-ring-brand" id="email" name="email" placeholder="nome@exemplo.com" required>
-                    <label for="email" class="text-muted">E-mail do Gestor</label>
-                </div>
-                
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control focus-ring-brand" id="senha" name="senha" placeholder="Senha" required>
-                    <label for="senha" class="text-muted">Senha</label>
-                </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-car-front text-success fs-1"></i>
 
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="lembrar">
-                        <label class="form-check-label text-muted small" for="lembrar">
-                            Lembrar-me
-                        </label>
+                        <h2 class="h4 mt-3">
+                            Carros
+                        </h2>
+
+                        <p class="text-muted">
+                            Controle os carros disponíveis para locação.
+                        </p>
                     </div>
-                    <a href="#" class="text-brand text-decoration-none small fw-bold">Esqueceu a senha?</a>
                 </div>
+            </div>
 
-                <button class="btn bg-brand w-100 py-3 fw-bold shadow-sm rounded-3 mb-3" type="submit">
-                    Entrar no Sistema
-                </button>
-                
-            </form>
-            
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-calendar-check text-warning fs-1"></i>
+
+                        <h2 class="h4 mt-3">
+                            Locações
+                        </h2>
+
+                        <p class="text-muted">
+                            Registre as retiradas e devoluções dos carros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">
+            DriveELW - Projeto ETEC
+        </p>
+    </footer>
+
 </body>
+
 </html>
