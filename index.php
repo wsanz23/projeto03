@@ -15,23 +15,65 @@
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         rel="stylesheet"
+
+</script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
     >
 </head>
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">
-                <i class="bi bi-car-front-fill text-primary"></i>
-                ELW
-            </a>
+    <<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
 
-            <span class="text-white">
-                Locadora de Carros
-            </span>
+        <a class="navbar-brand fw-bold" href="index.php">
+            <i class="bi bi-car-front-fill text-primary"></i>
+            AutoDrive
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php">
+                        Início
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="clientes.php">
+                        Clientes
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="carros.php">
+                        Carros
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="locacoes.php">
+                        Locações
+                    </a>
+                </li>
+
+            </ul>
         </div>
-    </nav>
+
+    </div>
+</nav>
 
     <main class="container py-5">
 
