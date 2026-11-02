@@ -1,3 +1,42 @@
+<?php
+
+require_once 'conexao.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $marca = trim($_POST['marca']);
+    $modelo = trim($_POST['modelo']);
+    $placa = trim($_POST['placa']);
+    $categoria = trim($_POST['categoria']);
+    $valor_diaria = (float) $_POST['valor_diaria'];
+    $status = trim($_POST['status']);
+
+    $comando = $conexao->prepare(
+        'INSERT INTO carro
+        (marca, modelo, placa, categoria, valor_diaria, status)
+        VALUES (?, ?, ?, ?, ?, ?)'
+    );
+
+    $comando->execute([
+        $marca,
+        $modelo,
+        $placa,
+        $categoria,
+        $valor_diaria,
+        $status
+    ]);
+
+    header('Location: carros.php');
+    exit;
+}
+
+$comando = $conexao->query(
+    'SELECT * FROM carro ORDER BY marca, modelo'
+);
+
+$carros = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -256,8 +295,9 @@
                         </span>
 
                         <span class="badge bg-primary">
-                            0 carros
-                        </span>
+                         <?= count($carros) ?> carros
+                    </span>
+
                     </div>
 
                     <div class="table-responsive">
@@ -275,12 +315,93 @@
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td colspan="6" class="text-center text-muted py-4">
-                                        Nenhum carro cadastrado.
-                                    </td>
-                                </tr>
-                            </tbody>
+
+    <?php if (count($carros) === 0): ?>
+
+        <tr>
+            <td colspan="6" class="text-center text-muted py-4">
+                Nenhum carro cadastrado.
+            </td>
+        </tr>
+
+    <?php else: ?>
+
+        <?php foreach ($carros as $carro): ?>
+
+            <tr>
+                <td>
+                    <?= htmlspecialchars(
+                        $carro['marca'] . ' ' . $carro['modelo'],
+                        ENT_QUOTES,
+                        'UTF-8'
+                    ) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars(
+                        $carro['placa'],
+                        ENT_QUOTES,
+                        'UTF-8'
+                    ) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars(
+                        $carro['categoria'],
+                        ENT_QUOTES,
+                        'UTF-8'
+                    ) ?>
+                </td>
+
+                <td>
+                    R$
+                    <?= number_format(
+                        $carro['valor_diaria'],
+                        2,
+                        ',',
+                        '.'
+                    ) ?>
+                </td>
+
+                <td>
+                    <?php if ($carro['status'] === 'disponivel'): ?>
+
+                        <span class="badge bg-success">
+                            Disponível
+                        </span>
+
+                    <?php elseif ($carro['status'] === 'alugado'): ?>
+
+                        <span class="badge bg-danger">
+                            Alugado
+                        </span>
+
+                    <?php else: ?>
+
+                        <span class="badge bg-warning text-dark">
+                            Em manutenção
+                        </span>
+
+                    <?php endif; ?>
+                </td>
+
+                <td>
+                    <button class="btn btn-sm btn-outline-primary">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-danger">
+                        Excluir
+                    </button>
+                </td>
+            </tr>
+
+        <?php endforeach; ?>
+
+    <?php endif; ?>
+
+</tbody>
+
 
                         </table>
                     </div>
