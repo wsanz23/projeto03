@@ -1,10 +1,21 @@
-Sistema de gestão de academia é de software personalizado.
-Onde terá o cadastro dos usuários, controle financeiro, visualização de faturamento, visualização do contábil, contagem de estoque e compras/vendas de produtos acadêmicos. 
+DriveELW - Sistema de locadora de carros.
 
+O objetivo do projeto é criar um sistema para ajudar no controle de uma locadora de carros.
+Com o sistema, será possível:
 
-O sistema será montado com as seguintes ferramentas: PHP, MySQL, Javascript, CSS.
+- cadastrar clientes;
+- cadastrar carros;
+- consultar os carros disponíveis;
+- registrar locações;
+- controlar as retiradas e devoluções dos carros.
 
-Esse sistema tem como objetivo que a empresa que estiver usando tenha um controle de todos os seus processos em um único local, trazendo confiabilidade e segurança no seu uso. 
+Ferramentas utilizadas
 
-
-Trazendo uma analise completa de todo a cadeia da empresas com informações/dados completas
+- PHP
+- MariaDB
+- XAMPP
+- Bootstrap
+- HTML
+- CSS
+- JavaScript
+- Git e GitHub
