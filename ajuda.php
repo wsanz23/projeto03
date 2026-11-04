@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    /*.php linguist-language=PHP//
 </body>
 </html>
