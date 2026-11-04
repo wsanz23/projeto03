@@ -77,85 +77,8 @@
     </div>
 </nav>
 
-    <main class="container py-5">
+   
 
-        <section class="bg-primary text-white rounded-4 p-5 shadow-sm">
-            <div class="row align-items-center">
-
-                <div class="col-md-8">
-                    <h1 class="display-5 fw-bold">
-                        Alugue seu carro com facilidade
-                    </h1>
-
-                    <p class="lead">
-                        Sistema de controle para clientes, carros e locações.
-                    </p>
-
-                    <a href="#resumo" class="btn btn-light">
-                        Conhecer o sistema
-                    </a>
-                </div>
-
-                <div class="col-md-4 text-center mt-4 mt-md-0">
-                    <i class="bi bi-car-front-fill display-1"></i>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="resumo" class="row g-4 mt-4">
-
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-people-fill text-primary fs-1"></i>
-
-                        <h2 class="h4 mt-3">
-                            Clientes
-                        </h2>
-
-                        <p class="text-muted">
-                            Cadastre e consulte os clientes da locadora.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-car-front text-success fs-1"></i>
-
-                        <h2 class="h4 mt-3">
-                            Carros
-                        </h2>
-
-                        <p class="text-muted">
-                            Controle os carros disponíveis para locação.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-calendar-check text-warning fs-1"></i>
-
-                        <h2 class="h4 mt-3">
-                            Locações
-                        </h2>
-
-                        <p class="text-muted">
-                            Registre as retiradas e devoluções dos carros.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </main>
 
     <footer class="bg-dark text-white text-center py-4">
         <p class="mb-0">
