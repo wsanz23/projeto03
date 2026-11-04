@@ -117,11 +117,11 @@
                                     </option>
 
                                     <option value="1">
-                                        Exemplo - João da Silva
+                                        João da Silva
                                     </option>
 
                                     <option value="2">
-                                        Exemplo - Maria Oliveira
+                                        Maria Oliveira
                                     </option>
                                 </select>
                             </div>
