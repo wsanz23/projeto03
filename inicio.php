@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="style.css">
     <title>DriveELW - Locadora de Carros</title>
 
 
@@ -77,8 +77,51 @@
     </div>
 </nav>
 
-   
+ <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
 
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="jeepcompass.png" class="d-block w-100 rounded-4" alt="Jeep Compass">
+        </div>
+
+        <div class="carousel-item">
+            <img src="corolla.png" class="d-block w-100 rounded-4" alt="Toyota Corolla">
+        </div>
+
+        <div class="carousel-item">
+            <img src="hyundai.png" class="d-block w-100 rounded-4" alt="Toyota Hilux">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <footer class="bg-dark text-white text-center py-4">
         <p class="mb-0">
