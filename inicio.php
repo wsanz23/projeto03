@@ -125,7 +125,7 @@
 
     <div class="col-md-6">
       <div class="card">
-        <div class="card-body">
+          <div class="card-body">
           <img src="jeepcompass.png" class="card-img" alt="Jeep Compass">
           <h5 class="mt-2">Jeep Compass 2023</h5>
           <small class="fg-3">Last updated 3 year</small>
@@ -145,6 +145,8 @@
 
   </div>
 </div>
+
+
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
