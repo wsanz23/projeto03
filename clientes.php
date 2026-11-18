@@ -78,7 +78,7 @@ $clientes = $comando->fetchAll(PDO::FETCH_ASSOC);
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="inicio.php">
                             Início
                         </a>
                     </li>

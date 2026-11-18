@@ -143,6 +143,17 @@
       </div>
     </div>
 
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img src="corolla.png" class="card-img" alt="Hyundai HB20">
+          <h5 class="mt-2">Hyundai HB20 2022</h5>
+           <small class="fg-3">Last updated 4 year</small>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
